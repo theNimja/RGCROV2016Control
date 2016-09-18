@@ -3,6 +3,8 @@
 //By Nimrod Libman, 16/06/2016
 
 
+#inlude "input.h" //include input library
+
 
 //const float deadZoneBuffer = 0.1; //if the absolute values of the x and y postion of the stick are withing this value of each other, stick is in deadzone.
 //this is a part of the input library not this code
