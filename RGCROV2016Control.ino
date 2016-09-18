@@ -3,7 +3,7 @@
 //By Nimrod Libman, 16/06/2016
 
 
-#inlude "input.h" //include input library
+
 
 
 //const float deadZoneBuffer = 0.1; //if the absolute values of the x and y postion of the stick are withing this value of each other, stick is in deadzone.
@@ -15,6 +15,8 @@ int lateIntensity; //PWM intensity for lateral  motors. Set by input() every tic
 char vertMotorDir; //determines whether we are going up, down, pitching up, pitching down, or rolling left or right. set by input() every tick.
 char lateMotorDir; //determines whether we are going forward, back, left, right, or yawing left or right. set by input() every tick.
 
+
+#inlude "input.ino" //include input library. This will make use of the above globals to manipulate the control.
 
 enum Pins { //PINOUTs for the motors. Replace witha actual PINOUT diagram
   LFL,
