@@ -47,6 +47,7 @@ enum Pins { //PINOUTs for the motors. Replace witha actual PINOUT diagram
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
+  setupfunctions();//defined in the input library;
 }
 
 void loop() {
