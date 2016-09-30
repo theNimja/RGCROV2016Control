@@ -16,7 +16,7 @@ char vertMotorDir; //determines whether we are going up, down, pitching up, pitc
 char lateMotorDir; //determines whether we are going forward, back, left, right, or yawing left or right. set by input() every tick.
 
 
-#inlude "input.h" //include input library. This will make use of the above globals to manipulate the control.
+#include "input.h" //include input library. This will make use of the above globals to manipulate the control.
 
 enum Pins { //PINOUTs for the motors. Replace witha actual PINOUT diagram
   LFL,
