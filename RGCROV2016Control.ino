@@ -16,7 +16,7 @@ char vertMotorDir; //determines whether we are going up, down, pitching up, pitc
 char lateMotorDir; //determines whether we are going forward, back, left, right, or yawing left or right. set by input() every tick.
 
 
-#inlude "input.ino" //include input library. This will make use of the above globals to manipulate the control.
+#inlude "input.h" //include input library. This will make use of the above globals to manipulate the control.
 
 enum Pins { //PINOUTs for the motors. Replace witha actual PINOUT diagram
   LFL,
@@ -47,6 +47,7 @@ enum Pins { //PINOUTs for the motors. Replace witha actual PINOUT diagram
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
+  setupFunctions();//defined by input library
 }
 
 void loop() {
