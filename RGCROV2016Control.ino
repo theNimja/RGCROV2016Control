@@ -18,6 +18,8 @@ char lateMotorDir; //determines whether we are going forward, back, left, right,
 
 #include <input.h> //include input library. This will make use of the above globals to manipulate the control.
 
+Input input;
+
 enum Pins { //PINOUTs for the motors. Replace witha actual PINOUT diagram
   LFL,
   LFR,
@@ -47,13 +49,13 @@ enum Pins { //PINOUTs for the motors. Replace witha actual PINOUT diagram
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  setupFunctions();//defined by input library
+  input = new Input();//defined by input library
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  input();//defined by the currently set input library.
-
+  input.LoopCode();//defined by the input library.
+//then assign vertIntesity and all that via the fucntions.
   //vertcial motor control
   analogWrite(VPWM, vertIntensity); //set PWM
   switch (vertMotorDir) {

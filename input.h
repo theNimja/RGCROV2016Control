@@ -12,9 +12,14 @@ class Input {
     int GetHorizIntensity();
     char GetVertiDirection();
     char GetHorizDirection();
+    void LoopCode();
 
-  
+  private:
+    USB Usb;
+    PS4USB PS4(&Usb);
 
+    bool printAngle, printTouch;
+    uint8_t oldL2Value, oldR2Value;
 }
 
 
